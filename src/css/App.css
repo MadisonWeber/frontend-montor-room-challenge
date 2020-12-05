@@ -1,0 +1,87 @@
+.App{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: 
+    "HeroLeft HeroLeft HeroLeft HeroLeft HeroRight HeroRight HeroRight"
+    "HeroLeft HeroLeft HeroLeft HeroLeft HeroRight HeroRight HeroRight"
+    "HeroLeft HeroLeft HeroLeft HeroLeft HeroRight HeroRight HeroRight"
+    "HeroLeft HeroLeft HeroLeft HeroLeft HeroRight HeroRight HeroRight"
+    "HeroLeft HeroLeft HeroLeft HeroLeft HeroRight HeroRight HeroRight"
+    "HeroLeft HeroLeft HeroLeft HeroLeft HeroRight HeroRight HeroRight"
+    "HeroLeft HeroLeft HeroLeft HeroLeft HeroRight HeroRight HeroRight"
+    "HeroLeft HeroLeft HeroLeft HeroLeft HeroRight HeroRight HeroRight"
+    "HeroBottomLeft HeroBottomLeft HeroBottomMiddle HeroBottomMiddle HeroBottomMiddle  HeroBottomRight HeroBottomRight"
+    "HeroBottomLeft HeroBottomLeft HeroBottomMiddle HeroBottomMiddle HeroBottomMiddle  HeroBottomRight HeroBottomRight"
+    "HeroBottomLeft HeroBottomLeft HeroBottomMiddle HeroBottomMiddle HeroBottomMiddle  HeroBottomRight HeroBottomRight"
+    "HeroBottomLeft HeroBottomLeft HeroBottomMiddle HeroBottomMiddle HeroBottomMiddle  HeroBottomRight HeroBottomRight";
+}
+
+
+
+.HeroLeft{
+    grid-area: HeroLeft;
+    position: relative;
+}
+
+.HeroRight{
+    grid-area: HeroRight;
+    background-color: var(--white);
+}
+
+.HeroBottomLeft{
+    grid-area: HeroBottomLeft;
+    background: url('../images/image-about-dark.jpg') no-repeat center center/cover;
+    
+}
+
+.HeroBottomMiddle{
+    grid-area: HeroBottomMiddle;
+    background-color: var(--white);
+}
+
+.HeroBottomRight{
+    grid-area: HeroBottomRight;
+    background: url("../images/image-about-light.jpg") no-repeat center center/cover;
+    
+}
+
+@media(max-width : 450px){
+
+    .App{
+        height: 200vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-areas: 
+        "HeroLeft HeroLeft HeroLeft"
+        "HeroLeft HeroLeft HeroLeft"
+        "HeroLeft HeroLeft HeroLeft"
+        "HeroRight HeroRight HeroRight"
+        "HeroRight HeroRight HeroRight"
+        "HeroRight HeroRight HeroRight"
+        "HeroBottomLeft HeroBottomLeft HeroBottomLeft"
+        "HeroBottomLeft HeroBottomLeft HeroBottomLeft"
+        "HeroBottomMiddle HeroBottomMiddle HeroBottomMiddle"
+        "HeroBottomMiddle HeroBottomMiddle HeroBottomMiddle"
+        "HeroBottomRight HeroBottomRight HeroBottomRight"
+        "HeroBottomRight HeroBottomRight HeroBottomRight"
+
+    }
+
+    .heroright__title{
+        font-size: 22px !important;
+        font-weight: 700 !important;
+    }
+
+    .heroright__content__container{
+        height: 75% !important;
+        width: 84% !important;
+    }
+
+
+
+}

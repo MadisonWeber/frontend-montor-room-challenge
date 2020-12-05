@@ -1,0 +1,63 @@
+.HeroRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.heroright__content__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 62%;
+    width: 75%;
+}
+
+.heroright__text{
+    color: var(--dark-grey);
+    font-size: 11px;
+    line-height: 1.6;
+    animation: changeSlide 500ms ease-in;
+   
+}
+
+.heroright__title{
+    font-size: 36px;
+    font-weight: 600;
+    animation: changeSlide 500ms ease-in;
+}
+
+.heroright__shop-now{
+    align-self: flex-start;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    outline-width: 0;
+    width: 190px;
+    height: 40px;
+    cursor: pointer;
+    white-space: nowrap;
+
+}
+
+.heroright__shop-now:active{
+    color: var(--dark-grey);
+}
+
+.heroright__shop-now:active > svg path{
+    fill: var(--dark-grey);
+}
+
+.heroright__shop-now > span{
+    font-size: 10px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.heroright__shop-now > svg{
+    transform: translateY(-1px);
+}
