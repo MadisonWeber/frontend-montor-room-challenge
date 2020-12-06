@@ -26,7 +26,6 @@ const HeroLeft = () => {
             {slideNum === 2 &&  <img src={require("../images/desktop-image-hero-2.jpg").default} alt="chair" className = 'heroleftimage'/>}
             {slideNum === 3 &&  <img src={require("../images/desktop-image-hero-3.jpg").default} alt="chair" className = 'heroleftimage'/>}
             <div className="heroleft__overlay">
-                
                 {!currentlyMobile&& 
                 <nav className="heroleft__nav">
                     <h1 className="nav__title">room</h1>
@@ -43,7 +42,8 @@ const HeroLeft = () => {
                         <h1 className="nav__title nav__title__mobile">room</h1>
                     </nav>
                 }
-                {currentlyMobile && <nav className="mobile__nav mobile__nav__hidden" ref = {hiddenNav}>
+                {currentlyMobile && 
+                <nav className="mobile__nav mobile__nav__hidden" ref = {hiddenNav}>
                     <div className="close-svg-holder">
                         <svg className = 'close-mobile-nav' onClick = {closeMobileNav} width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z" fill="#000" fill-rule="evenodd" opacity=".201"/></svg>
                     </div>

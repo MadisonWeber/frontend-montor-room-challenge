@@ -14,7 +14,7 @@ const GlobalContextProvider = ({children}) => {
     }, [])
 
     useEffect(()=> {
-        if(window.innerWidth < 450){
+        if(window.innerWidth < 600){
             setCurrentlyMobile(true)
         }
         window.addEventListener('resize' , checkWindowWidth);
@@ -24,7 +24,7 @@ const GlobalContextProvider = ({children}) => {
 
     const checkWindowWidth = () => {
         const currentWidth = window.innerWidth
-        if(currentWidth > 450){
+        if(currentWidth > 600){
             setCurrentlyMobile(false)
         } else{
             setCurrentlyMobile(true)

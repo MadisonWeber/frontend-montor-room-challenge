@@ -6,9 +6,7 @@ import { GlobalContext } from '../context/context'
 
 const Slider = () => {
 
-
     const { decreaseSlideNum,  increaseSlideNum, currentlyMobile} = useContext(GlobalContext)
-
 
     return (
         <div className = {currentlyMobile ? 'slider__mobile' : 'slider'}>

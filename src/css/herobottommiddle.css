@@ -12,6 +12,7 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 18px;
+    white-space: nowrap;
 }
 
 
