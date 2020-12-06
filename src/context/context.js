@@ -8,8 +8,17 @@ const GlobalContextProvider = ({children}) => {
     const [ slideNum, setSlideNum ] = useState(1);
     const [ currentlyMobile , setCurrentlyMobile ] = useState(false);
 
+
+
     useEffect(()=> {
+
+        const trialKeyUp = (e) => {
+            if(e.key === 'ArrowLeft') decreaseSlideNum();
+            if(e.key === 'ArrowRight') increaseSlideNum();
+        }
+
         window.addEventListener('keyup', trialKeyUp)
+
         return ()=> window.removeEventListener('keyup', trialKeyUp)
     }, [])
 
@@ -32,10 +41,7 @@ const GlobalContextProvider = ({children}) => {
     }
 
 
-    const trialKeyUp = (e) => {
-        if(e.key === 'ArrowLeft') decreaseSlideNum();
-        if(e.key === 'ArrowRight') increaseSlideNum();
-    }
+   
 
     const increaseSlideNum = () => {
         setSlideNum( (prev) => {
